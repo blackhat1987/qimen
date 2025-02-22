@@ -1,0 +1,289 @@
+/* 全局样式 */
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f0f0f0; 
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器样式 */
+.container { 
+    width: 100%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* 日期时间容器样式 */
+.datetime-container { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 15px; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    background-color: #f8f9fa; 
+    border-radius: 4px;
+}
+
+/* 表单组样式 */
+.form-group { 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    flex: 1 1 200px;
+}
+
+/* 表单组标签样式 */
+.form-group label { 
+    min-width: 40px; 
+    color: #333;
+    white-space: nowrap;
+}
+
+/* 选择框样式 */
+select { 
+    padding: 8px 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    font-size: 14px;
+    width: 50%;
+    max-width: 100px;
+    background-color: white;
+}
+
+/* 提交按钮样式 */
+.submit-btn { 
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px;
+    width: 50%;
+    max-width: 200px;
+    margin: 10px auto;
+}
+
+/* 提交按钮悬停样式 */
+.submit-btn:hover { 
+    background-color: #45a049; 
+}
+
+/* 信息组样式 */
+.info-group { 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    background-color: #f8f9fa; 
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 信息组标签样式 */
+.info-group span { 
+    margin-right: 15px; 
+    color: #333;
+    flex: 1 1 auto;
+}
+
+.info-group {
+    margin-bottom: 10px;
+  }
+  
+  .info-group span {
+    margin-right: 20px;
+  }
+  
+/* 空格标签样式 */
+.space {
+    margin-left: 10px; /* 左边空出10像素的空间 */
+    margin-right: 10px; /* 右边空出10像素的空间 */
+  }
+
+/* 奇门网格样式 */
+.qimen-grid {
+    width: 50%;
+    margin: 20px 0;
+    border-collapse: collapse;
+};
+
+/* 奇门网格单元格样式 */
+.qimen-grid td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+};
+
+/* 奇门网格单元格内部样式 */
+.qimen-grid td > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+
+/* 媒体查询：屏幕宽度小于等于 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .datetime-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-group {
+        flex: 1 1 100%;
+    }
+    
+    select {
+        max-width: none;
+    }
+    
+    .submit-btn {
+        max-width: none;
+    }
+    
+    .info-group span {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+    
+    .qimen-grid td > div {
+        font-size: 12px;
+    }
+}
+
+
+/* 媒体查询：屏幕宽度小于等于 320px */
+@media screen and (max-width: 320px) {
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .form-group label {
+        margin-bottom: 5px;
+    }
+    
+    .qimen-grid td > div {
+        font-size: 10px;
+    }
+}
+
+/* 日期时间表单样式 */
+.datetime-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* 日期时间行样式 */
+.datetime-row {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 按钮行样式 */
+.button-row {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* 表单组样式 */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    flex: 1;
+}
+
+/* 表单组标签样式 */
+.form-group label {
+    white-space: nowrap;
+    margin: 0;
+    color: #333;
+}
+
+/* 表单组选择框样式 */
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 100px;
+    flex: 1;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 8px 24px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* 主要按钮样式 */
+.btn-primary {
+    background-color: #4CAF50;
+}
+
+/* 次要按钮样式 */
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+/* 按钮悬停样式 */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* 媒体查询：屏幕宽度小于等于 768px */
+@media (max-width: 768px) {
+    .datetime-row {
+        flex-wrap: wrap;
+    }
+    
+    .form-group {
+        flex: 1 1 calc(50% - 15px);
+    }
+    
+    .button-row {
+        flex-wrap: wrap;
+    }
+    
+    .btn {
+        flex: 1 1 calc(33.33% - 10px);
+    }
+}
